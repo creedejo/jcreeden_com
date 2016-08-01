@@ -1,0 +1,1 @@
+{"version":3,"file":"styles.css","sources":["styles.scss","_variables.scss","_base.scss"],"sourcesContent":["@import 'variables','base'","\r\n$red:#ffffff;","body{\r\n\tbackground:$red;\r\n\r\n\th1{\r\n\tcolor:red;\r\n\t}\r\n}"],"mappings":"AEAA,AAAA,IAAI,AAAA,CACH,UAAU,CDAN,IAAO,CCKX,AAND,AAGC,IAHG,CAGH,EAAE,AAAA,CACF,KAAK,CAAC,GAAI,CACT","names":[],"sourceRoot":"/source/"}
