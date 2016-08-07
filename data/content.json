@@ -1,0 +1,20 @@
+{
+	"info":{
+		"lastname":"Creeden",
+		"firstname":"John",
+		"about":"Hi, My name is John Creeden. I am a web developer.",
+		"skills":[
+			{"tech":"PHP","years":3},
+			{"tech":"C#","years":10},
+			{"tech":"MySQL","years":3},
+			{"tech":"MSSQL","years":10}
+		],
+		"employment":[
+			{"company":"Baldwin & Obenauf","title":"Lead Developer","startdate":"October 2013", "enddate":"August 2016", "description":"In charge of all development."},
+			{"company":"Skye Multimedia","title":"Developer","startdate":"February 2009", "enddate":"October 2013","description":"Lead programmer"}
+		],
+		"education":[
+			{"school": "Seton Hall University","degree":"BA Communications | Certificate in Computer Graphics","year":2000}
+		]
+	}
+}

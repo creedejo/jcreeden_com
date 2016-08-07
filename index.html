@@ -1,25 +1,59 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html ng-app="jcApp" ng-controller="myCtrl">
 <head>
-<link href="assets/styles/styles.min.css" rel="stylesheet" />
+<link href="assets/styles/styles.css" rel="stylesheet" />
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 
 
 <body>
 
-<section id="intro"></section>
+<div>
 
-<section id="about"></section>
+	<section class="intro"><h1>{{ firstName + ", " + lastName}}</h2></section>
 
-<section id="skills"></section>
+	<section class="about"><h2>About:</h2>{{ about }}</section>
 
-<section id="employment"></section>
+	<section class="skills">
+		<h2>Skills</h2>
+		<ul>
+			<li ng-repeat="s in skills | orderBy:'years':true">{{ s.tech + " -- " + s.years }}</li>
+		</ul>
+	</section>
 
-<section id="education"></section>
+	<section class="employment">
+		<h2>Employment:</h2>
+		<div class="employment__row" ng-repeat="e in employment">
+			<div ng-if="$odd" class="left">
+				{{ e.company }}<br>
+				<b>{{ e.title }}</b><br>
+				{{ e.startdate + " - " + e.enddate }}<br>
+				{{ e.description }}
+			</div>
+			<div ng-if="$even" class="right">
+				{{ e.company }}<br>
+				<b>{{ e.title }}</b><br>
+				{{ e.startdate + " - " + e.enddate }}<br>
+				{{ e.description }}
+			</div>
+		</div>
+	</section>
 
-<section id="contact"></section>
+	<section class="education">
+		<h2>Education</h2>
+		<div style="margin-bottom:20px;" ng-repeat="e in education">
+			<b>{{ e.school }}</b><br>
+			{{ e.degree }}<br>
+			{{ e.year }}
+		</div>
+	</section>
 
+	<section class="contact"></section>
 
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="assets/js/main.min.js"></script>
 </body>
 
 </html>
