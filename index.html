@@ -6,7 +6,7 @@
 </head>
 
 
-<body>
+<body ng-cloak>
 
 <div>
 
@@ -23,19 +23,13 @@
 
 	<section class="employment">
 		<h2>Employment:</h2>
-		<div class="employment__row" ng-repeat="e in employment">
-			<div ng-if="$odd" class="left">
+		<div class="employment__row" ng-repeat="e in employment"  ng-class-even="'right'" ng-class-odd="'left'">
+			
 				{{ e.company }}<br>
 				<b>{{ e.title }}</b><br>
 				{{ e.startdate + " - " + e.enddate }}<br>
 				{{ e.description }}
-			</div>
-			<div ng-if="$even" class="right">
-				{{ e.company }}<br>
-				<b>{{ e.title }}</b><br>
-				{{ e.startdate + " - " + e.enddate }}<br>
-				{{ e.description }}
-			</div>
+			
 		</div>
 	</section>
 
