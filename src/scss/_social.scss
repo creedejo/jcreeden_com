@@ -1,0 +1,65 @@
+.social{
+	position:fixed;
+	right:0px;
+	top:0px;
+	width:360px;
+	height:60px;
+	z-index:1;
+
+	&__link{
+		position:relative;
+		height:60px;
+		width:60px;
+		float:right;
+		border-left:1px solid $dark-gray;
+		background:$overlay-blue-social;
+		color:#FFF;
+		font-size:28px;
+		cursor: pointer;
+
+		&:hover{
+			color:$text-gray;
+		}
+
+		i{
+			margin:50% auto;
+			-ms-transform:translateY(-50%);
+			-webkit-transform:translateY(-50%);
+			transform:translateY(-50%);
+			display: block;
+			text-align: center;
+		}
+	}
+
+	&__slideout{
+		position:relative;
+		height:60px;
+		width:220px;
+		float:right;
+		overflow: hidden;
+
+		.slide{
+			position:absolute;
+			width:100%;
+			height:100%;
+			right:-100%;
+			top:0px;
+			background:$overlay-blue-social;
+
+			span{
+				display: block;
+				font-family: $default-font;
+				color:$text-gray;
+				font-size:14px;
+				margin: 6px 20px;
+
+				strong{
+					font-size:18px;
+					color:#FFF;
+					display:block;
+				}
+			}
+			
+		}
+	}
+}

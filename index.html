@@ -3,27 +3,55 @@
 <head>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,greek' rel='stylesheet' type='text/css'>
 <link href="assets/styles/styles.css" rel="stylesheet" />
+<link href="assets/styles/libs/hamburgers.min.css" rel="stylesheet">
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://use.fontawesome.com/6c101a37f5.js"></script>
 </head>
 
 <body ng-cloak>
 
+<nav class="nav">
+	<div class="nav__toggle">
+		<!-- hamburger menu -->
+		<div class="hamburger hamburger--spin">
+		  <div class="hamburger-box">
+		    <div class="hamburger-inner"></div>
+		  </div>
+		</div>
+	</div>
+
+	<ul>
+		<li ng-repeat="n in nav"><a href="{{ n.link }}">{{ n.text }}</a></li>
+	</ul>
+</nav>
+
+<div class="social">
+	<div class="social__link"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+	<div class="social__link"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+	<div class="social__slideout">
+		<div class="slide">
+			<span><strong>{{ firstname + ' ' + lastname}}</strong>web developer</span>
+		</div>
+	</div>
+</div>
+
 <div class="page_container">
 
 	<!-- INTRO -->
-	<section class="intro">
+	<section id="intro" class="intro">
 		<div class="overlay blue"></div>
 		<div class="intro__content">
 			<p class="large">Hi.</p>
-			<h1>I'm <strong>{{ firstname + ' ' + lastname }}</strong></h1>
+			<h1 class="title-name">I'm <strong>{{ firstname + ' ' + lastname }}</strong></h1>
 			<hr />
 			<p class="small">web developer</p>
 			<div class="intro__content__img"></div>
 		</div>
+		<div class="btn_down" ng-click="scrollDown()"></div>
 	</section>
 
 	<!-- ABOUT -->
-	<section class="about">
+	<section id="about" class="about">
 		<div class="col-40"></div>
 		<div class="col-60">
 			<div class="about__content">
@@ -35,34 +63,34 @@
 	</section>
 
 	<!-- SKILLS -->
-	<section class="skills">
+	<section id="skills" class="skills">
 		<div class="overlay blue"></div>
 		<div class="content_container">
 			<h1>Skills</h1>
 			<hr />
 			<div class="skills_list">
-				<div class="skill"></div>
-				<div class="skill"></div>
-				<div class="skill"></div>
-				<div class="skill"></div>
-				<div class="skill"></div>
-				<div class="skill"></div>
-				<div class="skill"></div>
-				<div class="skill"></div>
-				<div class="skill"></div>
-				<div class="skill"></div>
-				<div class="skill"></div>
-				<div class="skill"></div>
-				<div class="skill"></div>
-				<div class="skill"></div>
-				<div class="skill"></div>
-				<div class="skill"></div>
+				<div class="skill html5"></div>
+				<div class="skill css3"></div>
+				<div class="skill js"></div>
+				<div class="skill jquery"></div>
+				<div class="skill php"></div>
+				<div class="skill mysql"></div>
+				<div class="skill aspnet"></div>
+				<div class="skill sql"></div>
+				<div class="skill sass"></div>
+				<div class="skill bootstrap"></div>
+				<div class="skill angular"></div>
+				<div class="skill backbone"></div>
+				<div class="skill wordpress"></div>
+				<div class="skill gulp"></div>
+				<div class="skill grunt"></div>
+				<div class="skill git"></div>
 			</div>
 		</div>
 	</section>
 
 	<!-- EXPERIENCE -->
-	<section class="experience">
+	<section id="experience" class="experience">
 		<div class="overlay gray"></div>
 		<div class="content_container">
 			<h1>Experience</h1>
@@ -80,7 +108,7 @@
 		</div>
 	</section>
 
-	<section class="education">
+	<section id="education" class="education">
 		<div class="overlay blue"></div>
 		<div class="content_container">
 			<h1>Education</h1>
@@ -93,7 +121,7 @@
 		</div>
 	</section>
 
-	<section class="contact">
+	<section id="contact" class="contact">
 		<div class="content_container">
 			<h1><strong>Contact</strong> Me</h1>
 			<hr />

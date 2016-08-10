@@ -58,4 +58,16 @@
 			background-size:cover;
 		}
 	}
+
+	.btn_down{
+		position:absolute;
+		left:50%;
+		bottom:0px;
+		margin-left:-30px;
+		width:60px;
+		height:60px;
+		background:url('/assets/img/btn_down.png') no-repeat;
+		background-size:cover;
+		cursor:pointer;
+	}
 }

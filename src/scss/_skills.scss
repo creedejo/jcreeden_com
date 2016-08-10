@@ -20,7 +20,56 @@
 			border-radius: 50%;
 			border:6px solid $text-gray;
 			background:#FFF url('/assets/img/skills.png') no-repeat;
-			background-size:cover;
+			background-size:400%;
+
+			&.html5{
+				background-position: 0px 0px;
+			}
+			&.css3{
+				background-position: 33% 0px;
+			}
+			&.js{
+				background-position: 66% 0px;
+			}
+			&.jquery{
+				background-position: 99% 0px;
+			}
+			&.php{
+				background-position: 0px 33%;
+			}
+			&.mysql{
+				background-position: 33% 33%;
+			}
+			&.aspnet{
+				background-position: 66% 33%;
+			}
+			&.sql{
+				background-position: 99% 33%;
+			}
+			&.sass{
+				background-position: 0px 66%;
+			}
+			&.bootstrap{
+				background-position: 33% 66%;
+			}
+			&.angular{
+				background-position: 66% 66%;
+			}
+			&.backbone{
+				background-position: 99% 66%;
+			}
+			&.wordpress{
+				background-position: 0px 99%;
+			}
+			&.gulp{
+				background-position: 33% 99%;
+			}
+			&.grunt{
+				background-position: 66% 99%;
+			}
+			&.git{
+				background-position: 99% 99%;
+			}
 		}
 	}
 }

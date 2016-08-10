@@ -1,0 +1,58 @@
+.nav{
+	position:fixed;
+	top:0px;
+	left:-320px;
+	width:320px;
+	height:100%;
+	background:$nav-bg;
+	z-index:2;
+
+	&__toggle{
+		position:absolute;
+		left:100%;
+		top:0px;
+		width:60px;
+		height:60px;
+		background: $overlay-blue-social;
+	}
+
+	ul{
+		margin:0px;
+		padding:0px;
+		list-style:none;
+
+		li{
+			display:block;
+			border-bottom:1px solid $dark-gray-2;
+			font-family:$default-font;
+
+			a{
+				color:#FFF;
+				text-decoration: none;
+				display:block;
+				font-size: 18px;
+				font-weight:bold;
+				padding:18px 10px 18px 60px;
+				letter-spacing: 1px;
+
+				&:hover{
+					color:$text-gray;
+				}
+			}
+		}
+	}
+}
+
+/* hamburger overrides */
+
+.hamburger{
+	margin-top:3px !important;
+}
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+	background-color:#FFF !important;
+	width:30px !important;
+	-webkit-border-radius: 0px !important;
+	-moz-border-radius: 0px !important;
+	border-radius: 0px !important;
+}

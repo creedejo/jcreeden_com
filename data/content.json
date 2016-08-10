@@ -17,6 +17,14 @@
 		],
 		"education":[
 			{"school": "Seton Hall University","degrees":["BA Communications","Certificate in Computer Graphics"],"location":"South Orange, New Jersey", "year":2000}
+		],
+		"nav":[
+			{"text":"intro","link":"#intro"},
+			{"text":"about me","link":"#about"},
+			{"text":"skills","link":"#skills"},
+			{"text":"experience","link":"#experience"},
+			{"text":"education","link":"#education"},
+			{"text":"contact me","link":"#contact"}
 		]
 	}
 }
