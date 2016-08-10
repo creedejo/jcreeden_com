@@ -1,0 +1,38 @@
+.about{
+	background:#FFF;
+
+	h1{
+		color:$text-gray;
+		text-align: left;
+		margin:10px 0;
+		strong{
+			color:$text-blue;
+		}
+	}
+
+	.col-40{
+		position:relative;
+		display: block;
+		float: left;
+		width:40%;
+		height:100%;
+		background:url('/assets/img/me-about-temp.png') no-repeat;
+		background-size:cover;
+	}
+
+	.col-60{
+		position:relative;
+		display: block;
+		float: left;
+		width:60%;
+		height:100%;
+	}
+
+	&__content{
+		margin:130px 116px;
+
+		hr{
+			margin:10px 0px 20px;
+		}
+	}
+}

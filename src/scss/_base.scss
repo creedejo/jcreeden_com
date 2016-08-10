@@ -1,2 +1,41 @@
+html,body{
+	height:100%;
+}
+
 body{
+	margin: 100% 0 0 0;
+    padding: 0px;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.page_container, .content_container{
+	position:relative;
+}
+
+
+h1{
+	font-family:$default-font;
+	font-size:36px;
+	color:#FFF;
+	margin:80px 0 10px;
+	text-align:center;
+}
+
+
+p{
+	font-family:$default-font;
+	font-size:16px;
+	color:$text-gray;
+	margin:10px 0px;
+	line-height:30px;
+}
+
+hr{
+	width:80px;
+	display: block;
+	border:none;
+	height:4px;
+	margin:10px auto 20px;
+	background:$text-gray;
 }

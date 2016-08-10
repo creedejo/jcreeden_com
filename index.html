@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html ng-app="jcApp" ng-controller="myCtrl">
+<html ng-app="jcApp" ng-controller="jcCtrl">
 <head>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,greek' rel='stylesheet' type='text/css'>
 <link href="assets/styles/styles.css" rel="stylesheet" />
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
@@ -8,21 +9,62 @@
 
 <body ng-cloak>
 
-<div>
+<div class="page_container">
 
-	<section class="intro"><h1>{{ firstName + ", " + lastName}}</h2></section>
-
-	<section class="about"><h2>About:</h2>{{ about }}</section>
-
-	<section class="skills">
-		<h2>Skills</h2>
-		<ul>
-			<li ng-repeat="s in skills | orderBy:'years':true">{{ s.tech + " -- " + s.years }}</li>
-		</ul>
+	<!-- INTRO -->
+	<section class="intro">
+		<div class="overlay blue"></div>
+		<div class="intro__content">
+			<p class="large">Hi.</p>
+			<h1>I'm <strong>{{ firstname + ' ' + lastname }}</strong></h1>
+			<hr />
+			<p class="small">web developer</p>
+			<div class="intro__content__img"></div>
+		</div>
 	</section>
 
-	<section class="employment">
-		<h2>Employment:</h2>
+	<!-- ABOUT -->
+	<section class="about">
+		<div class="col-40"></div>
+		<div class="col-60">
+			<div class="about__content">
+				<h1><strong>About</strong> Me</h1>
+				<hr />
+				<div ng-bind-html="about"></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- SKILLS -->
+	<section class="skills">
+		<div class="overlay blue"></div>
+		<div class="content_container">
+			<h1>Skills</h1>
+			<hr />
+			<div class="skills_list">
+				<div class="skill"></div>
+				<div class="skill"></div>
+				<div class="skill"></div>
+				<div class="skill"></div>
+				<div class="skill"></div>
+				<div class="skill"></div>
+				<div class="skill"></div>
+				<div class="skill"></div>
+				<div class="skill"></div>
+				<div class="skill"></div>
+				<div class="skill"></div>
+				<div class="skill"></div>
+				<div class="skill"></div>
+				<div class="skill"></div>
+				<div class="skill"></div>
+				<div class="skill"></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- EXPERIENCE -->
+	<section class="experience">
+		<h2>Experience:</h2>
 		<div class="employment__row" ng-repeat="e in employment"  ng-class-even="'right'" ng-class-odd="'left'">
 			
 				{{ e.company }}<br>
@@ -31,6 +73,7 @@
 				{{ e.description }}
 			
 		</div>
+		<div class="overlay gray"></div>
 	</section>
 
 	<section class="education">
@@ -40,9 +83,12 @@
 			{{ e.degree }}<br>
 			{{ e.year }}
 		</div>
+		<div class="overlay blue"></div>
 	</section>
 
-	<section class="contact"></section>
+	<section class="contact">
+		<h2>Contact Me</h2>
+	</section>
 
 </div>
 

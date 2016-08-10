@@ -2,7 +2,7 @@
 	"info":{
 		"lastname":"Creeden",
 		"firstname":"John",
-		"about":"Hi, My name is John Creeden. I am a web developer.",
+		"about":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec libero sed massa tincidunt placerat quis et orci. Nunc et urna quis erat vehicula vehicula. Vestibulum eget mauris sed lacus scelerisque iaculis. Nulla consequat in dui eget lobortis. Maecenas blandit tellus id augue efficitur, eu vehicula nisi lobortis. Fusce vel ligula nunc. Morbi non congue metus. Nullam bibendum libero libero, laoreet scelerisque mauris dignissim id. Integer tincidunt volutpat elementum. In in varius odio. Aliquam egestas nisi a mollis tincidunt.</p>",
 		"skills":[
 			{"tech":"PHP","years":3},
 			{"tech":"C#","years":10},
