@@ -10,11 +10,13 @@
 			{"tech":"MSSQL","years":10}
 		],
 		"employment":[
-			{"company":"Baldwin & Obenauf","title":"Lead Developer","startdate":"October 2013", "enddate":"August 2016", "description":"In charge of all development."},
-			{"company":"Skye Multimedia","title":"Developer","startdate":"February 2009", "enddate":"October 2013","description":"Lead programmer"}
+			{"company":"Baldwin & Obenauf","title":"Lead Developer","startdate":"October 2013", "enddate":"August 2016"},
+			{"company":"Skye Multimedia","title":"Programmer/Analyst","startdate":"February 2009", "enddate":"October 2013"},
+			{"company":"Xquizit Technologies","title":"Web Designer/Developer","startdate":"September 2002", "enddate":"January 2009"},
+			{"company":"adReady","title":"Flash/Web Designer","startdate":"February 2001", "enddate":"January 2002"}
 		],
 		"education":[
-			{"school": "Seton Hall University","degree":"BA Communications | Certificate in Computer Graphics","year":2000}
+			{"school": "Seton Hall University","degrees":["BA Communications","Certificate in Computer Graphics"],"location":"South Orange, New Jersey", "year":2000}
 		]
 	}
 }

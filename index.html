@@ -6,7 +6,6 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 
-
 <body ng-cloak>
 
 <div class="page_container">
@@ -64,30 +63,39 @@
 
 	<!-- EXPERIENCE -->
 	<section class="experience">
-		<h2>Experience:</h2>
-		<div class="employment__row" ng-repeat="e in employment"  ng-class-even="'right'" ng-class-odd="'left'">
-			
-				{{ e.company }}<br>
-				<b>{{ e.title }}</b><br>
-				{{ e.startdate + " - " + e.enddate }}<br>
-				{{ e.description }}
-			
-		</div>
 		<div class="overlay gray"></div>
+		<div class="content_container">
+			<h1>Experience</h1>
+			<hr />
+			<div class="timeline">
+				<div class="timeline__vline"></div>
+				<div class="timeline__circle"></div>
+				<div class="job" ng-repeat="e in employment" ng-class-odd="'left'" ng-class-even="'right'">
+					<div class="small_line"></div>
+					<span class="job_info">{{ e.company }}</span>
+					<span class="job__title">{{ e.title }}</span>
+					<span class="job__info">{{ e.startdate + ' - ' + e.enddate }}</span>
+				</div>
+			</div>
+		</div>
 	</section>
 
 	<section class="education">
-		<h2>Education</h2>
-		<div style="margin-bottom:20px;" ng-repeat="e in education">
-			<b>{{ e.school }}</b><br>
-			{{ e.degree }}<br>
-			{{ e.year }}
-		</div>
 		<div class="overlay blue"></div>
+		<div class="content_container">
+			<h1>Education</h1>
+			<hr />
+			<p>{{ education[0].school }}</p>
+			<p class="small-text">{{ education[0].location }}</p>
+			<div class="shu"></div>
+			<p ng-repeat="d in education[0].degrees">{{ d }}</p>
+
+		</div>
 	</section>
 
 	<section class="contact">
-		<h2>Contact Me</h2>
+		<h1><strong>Contact</strong> Me</h1>
+		<hr />
 	</section>
 
 </div>

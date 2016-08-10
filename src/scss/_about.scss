@@ -11,11 +11,11 @@
 	}
 
 	.col-40{
-		position:relative;
-		display: block;
-		float: left;
+		position:absolute;
 		width:40%;
 		height:100%;
+		left:0px;
+		top:0px;
 		background:url('/assets/img/me-about-temp.png') no-repeat;
 		background-size:cover;
 	}
@@ -26,6 +26,7 @@
 		float: left;
 		width:60%;
 		height:100%;
+		margin-left:40%;
 	}
 
 	&__content{

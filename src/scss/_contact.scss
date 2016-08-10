@@ -1,3 +1,15 @@
-section.contact{
+.contact{
 	background:#FFF;
+
+	h1{
+		color:$text-gray;
+
+		strong{
+			color:$text-blue;
+		}
+	}
+
+	hr{
+		background: $text-blue;
+	}
 }
