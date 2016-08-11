@@ -19,7 +19,7 @@
 			-moz-border-radius: 50%;
 			border-radius: 50%;
 			border:6px solid $text-gray;
-			background:#FFF url('/assets/img/skills.png') no-repeat;
+			background:$skill-bg url('/assets/img/skills.png') no-repeat;
 			background-size:400%;
 
 			&.html5{

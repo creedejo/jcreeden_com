@@ -94,6 +94,7 @@ function setAnchors(){
 			$("html,body").animate({"scrollTop":newtop},600);
 			
 			if($(".nav").hasClass("open")){
+				$(".hamburger").toggleClass("is-active");
 				toggleNav();
 			}
 		}
