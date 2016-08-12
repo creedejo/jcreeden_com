@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="jcApp" ng-controller="jcCtrl">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,greek' rel='stylesheet' type='text/css'>
 <link href="assets/styles/styles.css" rel="stylesheet" />
 <link href="assets/styles/libs/hamburgers.min.css" rel="stylesheet">
@@ -22,12 +23,16 @@
 
 	<ul>
 		<li ng-repeat="n in nav"><a href="{{ n.link }}">{{ n.text }}</a></li>
+		<li class="nav__social">
+			<a href="https://twitter.com/creedejo" target="_blank" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+			<a href="https://www.linkedin.com/in/johncreeden" target="_blank" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+		</li>
 	</ul>
 </nav>
 
 <div class="social">
-	<div class="social__link"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-	<div class="social__link"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+	<div class="social__link"><a href="https://twitter.com/creedejo" target="_blank" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
+	<div class="social__link"><a href="https://www.linkedin.com/in/johncreeden" target="_blank" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
 	<div class="social__slideout">
 		<div class="slide">
 			<span><strong>{{ firstname + ' ' + lastname}}</strong>web developer</span>
@@ -47,7 +52,7 @@
 			<p class="small">web developer</p>
 			<div class="intro__content__img"></div>
 		</div>
-		<div class="btn_down" ng-click="scrollDown()"></div>
+		<div class="btn_down" ng-click="scrollDown()"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
 	</section>
 
 	<!-- ABOUT -->
@@ -145,7 +150,7 @@
 							<input id="txt_email" name="txt_email" type="text" />
 						</div>
 						<div class="col-right">
-							<label for="txt_phone">Phone:*</label>
+							<label for="txt_phone">Phone:</label>
 							<input id="txt_phone" name="txt_phone" type="text" />
 						</div>
 					</div>
@@ -161,6 +166,14 @@
 		</div>
 	</section>
 
+
+	<div class="nav__btm">
+		<div class="nav__btm__container">
+			<a ng-click="topTop()" class="btn btn__top"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+			<a ng-click="upOne()" class="btn btn__up"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+			<a ng-click="downOne()" class="btn btn__down"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+		</div>
+	</div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

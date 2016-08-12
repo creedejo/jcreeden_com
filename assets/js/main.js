@@ -34,9 +34,55 @@ app.controller('jcCtrl',['$scope','$http', '$sce', function($scope,$http,$sce) {
 		scrollTo("#about");
 	};
 
+	$scope.sections = [];
+
 	angular.element(document).ready(function () {
         setAnchors();
+        $("section").each(function(){
+        	$scope.sections.push($(this));
+        });
     });
+
+
+    $scope.topTop = function(){
+    	$("html,body").animate({"scrollTop":"0px"},1000);
+    }
+
+    $scope.upOne = function(){
+    	var scrollY = $(window).scrollTop();
+    	var wHeight = $(window).height();
+    	var targetY=0;
+
+		if(scrollY>wHeight){
+			
+			for(s=0;s<$scope.sections.length;s++){
+				var sec = $scope.sections[s];
+				var sTop = sec.offset().top;
+				if(sTop<scrollY || s==0){
+					targetY=sTop;
+				}
+			}
+		}
+
+    	$("html,body").animate({"scrollTop":targetY},500);
+    }
+
+    $scope.downOne = function(){
+    	var scrollY = $(window).scrollTop();
+    	var wHeight = $(window).height();
+    	var targetY=0;
+
+    	for(s=$scope.sections.length-1;s>0;s--){
+			var sec = $scope.sections[s];
+			var sTop = sec.offset().top;
+			if(sTop>(scrollY+(wHeight/2))){
+				targetY=sTop;
+			}
+		}
+		if(targetY>0){
+			$("html,body").animate({"scrollTop":targetY},500);
+		}
+    }
 
 }]);
 
@@ -53,13 +99,16 @@ function toggleSlideOut(){
 	var toggleY = $(window).height()/2;
 	var scrollY = $(window).scrollTop();
 	var $slide = $(".social .slide");
+	var $subnav = $(".nav__btm__container");
 	if(scrollY>=toggleY && !$slide.hasClass("open")){
 		$slide.addClass("open");
 		$slide.animate({"right":"0px"},250);
+		$subnav.fadeIn();
 	}
 	else if(scrollY<toggleY && $slide.hasClass("open")){
 		$slide.removeClass("open");
 		$slide.animate({"right":"-100%"},250);
+		$subnav.fadeOut();
 	}
 }
 

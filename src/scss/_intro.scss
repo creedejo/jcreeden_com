@@ -19,13 +19,22 @@
 
 
 		h1{
-			margin:20px 0px 0px 0px;
+			margin:20px auto 0px auto;
 			padding:0px;
 			font-family:$default-font;
 			font-size:74px;
 			color:$text-gray;
+			max-width: 90%;
 			strong{
 				color:#FFF;
+			}
+
+			@media screen and (max-width:$tablet-portrait){
+				font-size:60px;
+			}
+
+			@media screen and (max-width:$sub-tablet){
+				font-size:44px;
 			}
 		}
 
@@ -38,6 +47,13 @@
 			&.large{
 				font-size:60px;
 				line-height:20px;
+				@media screen and (max-width:$tablet-portrait){
+					font-size:52px;
+				}
+				@media screen and (max-width:$sub-tablet){
+					font-size:38px;
+					line-height:2px;
+				}
 			}
 
 			&.small{
@@ -66,8 +82,19 @@
 		margin-left:-30px;
 		width:60px;
 		height:60px;
-		background:url('/assets/img/btn_down.png') no-repeat;
+		background:$btn-gray;
 		background-size:cover;
 		cursor:pointer;
+
+		&:hover{
+			background:$btn-gray-hover;
+		}
+		i{
+			font-weight: bold;
+		    font-size: 64px;
+		    text-align: center;
+		    width:100%;
+		    color:$arrow-blue;
+		}
 	}
 }

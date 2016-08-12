@@ -6,6 +6,10 @@
 	height:60px;
 	z-index:1;
 
+	@media screen and (max-width:$sub-tablet){
+		display:none;
+	}
+
 	&__link{
 		position:relative;
 		height:60px;
@@ -17,9 +21,16 @@
 		font-size:28px;
 		cursor: pointer;
 
-		&:hover{
-			color:$text-gray;
+		a{
+			color:#FFF;
+			text-decoration: none;
+
+			&:hover{
+				color:$text-gray;
+			}
 		}
+
+		
 
 		i{
 			margin:50% auto;

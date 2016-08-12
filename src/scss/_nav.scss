@@ -7,6 +7,11 @@
 	background:$nav-bg;
 	z-index:2;
 
+	@media screen and (max-width:$max-nav){
+		width:240px;
+		left:-240px;
+	}
+
 	&__toggle{
 		position:absolute;
 		left:100%;
@@ -39,8 +44,101 @@
 					color:$text-gray;
 				}
 			}
+
+			&.nav__social{
+				display: none;
+				padding-left:60px;
+				border-bottom:none;
+
+				@media screen and (max-width:$sub-tablet){
+					display: block;
+				}
+
+				a{
+					font-size:32px;
+					display:inline-block;
+					padding:18px 24px 18px 0px;
+					color:#FFF;
+					text-decoration:none;
+				}
+			}
 		}
 	}
+}
+
+/* bottom right nav */
+
+.nav__btm{
+	position:fixed;
+	right:10px;
+	bottom:10px;
+	width:81px;
+	height:81px;
+
+	&__container{
+		display:none;
+	}
+
+	@media screen and (max-width:$sub-tablet){
+		display:none;
+	}
+
+
+	.btn{
+		position:relative;
+		width:40px;
+		height:40px;
+		background:$btn-gray;
+		cursor:pointer;
+
+		&:hover{
+			background:$btn-gray-hover;
+		}
+
+		&__top{
+			display:block;
+			margin: 0px auto 1px;
+			font-weight: bold;
+    		text-align: center;
+    		font-size:50px;
+    		color:$dark-gray-2;
+
+    		i{
+    			position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    width: 40px;
+			    height: 40px;
+			    margin: -26px 0 0 -20px;
+    		}
+		}
+
+		&__up,&__down{
+			    display: block;
+			    margin: 0px;
+			    padding: 0px;
+			    font-size:28px;
+			    text-align: center;
+			    color:$arrow-blue;
+
+			    i{
+	    			position: absolute;
+				    top: 50%;
+				    left: 50%;
+				    width: 40px;
+				    height: 40px;
+				    margin: -14px 0 0 -20px;
+	    		}
+		}
+
+		&__up{
+			float:left;
+		}
+		&__down{
+			float:right;
+		}
+	}
+
 }
 
 /* hamburger overrides */

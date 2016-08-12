@@ -20,4 +20,8 @@ section{
 			background:$overlay-gray;
 		}
 	}
+
+	@media screen and (max-width:$desktop){
+		min-height: auto;
+	}
 }

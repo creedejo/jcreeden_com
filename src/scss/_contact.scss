@@ -20,6 +20,10 @@
 		max-width:640px;
 		margin:auto;
 
+		@media screen and (max-width:$desktop){
+			width:70%;
+		}
+
 		form{
 			margin-top:40px;
 
@@ -77,12 +81,21 @@
 				position:relative;
 				float:left;
 				width:46%;
+
+				@media screen and (max-width:$sub-tablet){
+					width:100%;
+				}
 			}
 
 			.col-right{
 				position:relative;
 				float:right;
 				width:46%;
+
+				@media screen and (max-width:$sub-tablet){
+					width:100%;
+					margin-top:20px;
+				}
 			}
 		}
 	}

@@ -10,12 +10,21 @@ section.experience{
 		margin:60px auto;
 		padding-bottom:60px;
 
+		@media screen and (max-width:$sub-tablet){
+			padding-bottom:0px;
+			margin:60px auto 20px;
+		}
+
 		&__vline{
 			position:absolute;
 			left:50%;
 			width:1px;
 			height:100%;
 			background:#FFF;
+
+			@media screen and (max-width:$sub-tablet){
+				display:none;	
+			}
 		}
 
 		&__circle{
@@ -26,6 +35,10 @@ section.experience{
 			height:10px;
 			margin-left:-5px;
 			background:#FFF;
+
+			@media screen and (max-width:$sub-tablet){
+				display:none;	
+			}
 		}
 
 		.job{
@@ -36,12 +49,20 @@ section.experience{
 			font-weight:bold;
 			padding-bottom:40px;
 
+			@media screen and (max-width:$sub-tablet){
+				width:90%;
+				margin:auto;
+			}
+
 			.small_line{
 				position:absolute;
 				top:0px;
 				height:1px;
 				width:20px;
 				background:#FFF;
+				@media screen and (max-width:$sub-tablet){
+					display:none;	
+				}
 			}
 
 			span{
@@ -52,6 +73,11 @@ section.experience{
 				text-align: right;
 				padding-right:6%;
 
+				@media screen and (max-width:$sub-tablet){
+					text-align: center;	
+					padding-right:0px;
+				}
+
 				.small_line{
 					right:0px;
 				}
@@ -61,6 +87,12 @@ section.experience{
 				text-align: left;
 				padding-left:6%;
 				margin-left:50%;
+
+				@media screen and (max-width:$sub-tablet){
+					text-align: center;	
+					margin-left:auto;
+					padding-left:0px;
+				}
 
 				.small_line{
 					left:0px;

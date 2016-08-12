@@ -31,4 +31,15 @@
 		background-size:cover;
 	}
 
+	.content_container{
+		@media screen and (max-width:$sub-tablet){
+			width:90%;
+			margin:auto;
+		}
+	}
+
+	@media screen and (max-width:$desktop){
+		padding-bottom:140px;
+	}
+
 }
