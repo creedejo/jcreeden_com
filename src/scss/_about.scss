@@ -54,10 +54,12 @@
 		//margin:23% 10% 0 20%;
 		    margin: 15% 8% 0 20%;
 		hr{
+			display:inline-block;
 			margin:10px 0px 20px;
 
 			@media screen and (max-width:$desktop){
 				margin:10px auto 20px;
+				display: block;
 			}
 		}
 
