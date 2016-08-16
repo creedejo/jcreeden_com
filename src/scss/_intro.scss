@@ -7,6 +7,11 @@
 	background:url('/assets/img/bg1.jpg') no-repeat;
 	background-size:cover;
 
+	@media screen and (max-width:$sub-tablet){
+		position:relative;
+		height:100vh;
+	}
+
 	&__content{
 		position:absolute;
 		width:100%;

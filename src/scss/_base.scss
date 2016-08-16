@@ -9,6 +9,10 @@ body{
 	-moz-osx-font-smoothing: grayscale;
 	overflow-x:hidden;
 	background:$arrow-blue;
+
+	@media screen and (max-width:$sub-tablet){
+		margin:0px;
+	}
 }
 
 .page_container, .content_container{

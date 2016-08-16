@@ -64,9 +64,9 @@ $email_message .= '</body></html>';
  
 // Sending email
 if(mail($to, $subject, $email_message, $headers)){
-    echo "Thanks! Your message has been sent. I'll be in touch shortly.";
+    echo "Thanks! Your message has been sent.<br>I'll be in touch shortly.";
 } else{
-    echo "I'm sorry there was an error sending your message.  Please try again or send me an email at <a href='mailto:johncreeden@hotmail.com'>johncreeden@hotmail.com</a>.";
+    echo "I'm sorry there was an error sending your message.<br>Please try again or send me an email at <a href='mailto:johncreeden@hotmail.com'>johncreeden@hotmail.com</a>.";
 }
 
 ?>

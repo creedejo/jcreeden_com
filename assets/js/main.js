@@ -26,6 +26,8 @@ $(document).ready(function(){
 		$responseP.html("Sending...");
 		$responseContainer.fadeIn();
 
+		$("html,body").animate({scrollTop:$(document).height()},250);
+
 	 	var postURL = $(this).attr("action");
 	 	var name="John", company = "My Company", email="johncreeden@hotmail.com", phone="2018033829", message="hello ball!";
 	 	//var data = {"name":name,"company":company,"email":email,"phone":phone,"message":message};
@@ -45,7 +47,7 @@ $(document).ready(function(){
 		    {
 		 		var $responseContainer = $(".contact_confirm");
 		        var $responseP = $responseContainer.find("p").eq(0);
-		        $responseP.html("I'm sorry there was an error sending your message.  Please try again or send me an email at <a href='mailto:johncreeden@hotmail.com'>johncreeden@hotmail.com</a>.");
+		        $responseP.html("I'm sorry there was an error sending your message.<br>Please try again or send me an email at <a href='mailto:johncreeden@hotmail.com'>johncreeden@hotmail.com</a>.");
 		        console.log(jqXHR.status);
 		        console.log(errorThrown);
 		        //$responseContainer.fadeIn();
@@ -158,17 +160,23 @@ function toggleSlideOut(){
 }
 
 function toggleNav(){
+	var winW = $(window).width();
 	var $nav = $(".nav");
 	var nWidth = $nav.width();
 	if(!$nav.hasClass("open")){
 		$nav.addClass("open");
 		$nav.animate({"left":"0px"},250);
-		$(".intro,.page_container").animate({"left":nWidth},250);
+		if(winW>=768){
+			$(".intro,.page_container").animate({"left":nWidth},250);
+		}
 	}
 	else{
 		$nav.removeClass("open");
 		$nav.animate({"left":-(nWidth)},250);
-		$(".intro,.page_container").animate({"left":"0px"},250);
+		if($(".intro").css("left")!="0px"){
+			$(".intro,.page_container").animate({"left":"0px"},250);
+		}
+		
 	}
 
 }
