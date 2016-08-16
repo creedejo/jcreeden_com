@@ -1,7 +1,11 @@
 .ios{
 	.intro{
 		.btn_down{
-			bottom:40px;
+			bottom:60px;
+		}
+
+		&__content{
+			top:45%;
 		}
 	}
 }

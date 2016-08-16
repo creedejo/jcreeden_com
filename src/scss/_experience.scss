@@ -59,6 +59,10 @@ section.experience{
 			font-weight:bold;
 			padding-bottom:40px;
 
+			@media screen and (max-width:$tablet-landscape){
+				padding-bottom:20px;
+			}
+
 			@media screen and (max-width:$sub-tablet){
 				width:90%;
 				margin:auto;

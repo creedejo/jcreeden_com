@@ -10,6 +10,11 @@
 		max-width:640px;
 		text-align: center;
 
+		@media screen and (max-width:$tablet-landscape){
+			max-width:500px;
+			margin:30px auto;
+		}
+
 		.skill{
 			display:inline-block;
 			width:18%;
@@ -26,10 +31,6 @@
 				width:15%;
 				padding-top:15%;
 			}
-
-			
-			
-
 
 			&.html5{
 				background-position: 0px 0px;

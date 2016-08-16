@@ -52,8 +52,8 @@ $headers .= 'From: '.$from."\r\n".
  
 // Compose a simple HTML email message
 $email_message = '<html><body>';
-$email_message .= '<h1 style="color:#f40;">Contact Form: </h1>';
-$email_message .= '<p style="color:#080;font:18px Arial">';
+$email_message .= '<p style="font:16px Arial; font-weight:bold;">Contact Form:</p>';
+$email_message .= '<p style="font:14px Arial">';
 $email_message .= '<b>NAME: </b>' . $name . '<br>';
 $email_message .= '<b>COMPANY: </b>' . $company . '<br>';
 $email_message .= '<b>PHONE: </b>' . $phone . '<br>';

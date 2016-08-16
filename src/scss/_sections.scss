@@ -22,6 +22,6 @@ section{
 	}
 
 	@media screen and (max-width:$desktop){
-		min-height: auto;
+		min-height: auto !important;
 	}
 }
