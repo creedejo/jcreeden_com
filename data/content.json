@@ -24,7 +24,8 @@
 			{"text":"skills","link":"#skills"},
 			{"text":"experience","link":"#experience"},
 			{"text":"education","link":"#education"},
-			{"text":"contact me","link":"#contact"}
+			{"text":"contact me","link":"#contact"},
+			{"text":"resume","link":"/assets/pdf/JohnCreeden_resume.pdf","target":"_blank"}
 		]
 	}
 }

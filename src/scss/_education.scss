@@ -1,5 +1,5 @@
 .education{
-	background:url('/assets/img/bg-temp.jpg') no-repeat;
+	background:url('/assets/img/bg-education.jpg') no-repeat;
 	background-size:cover;
 
 	p{
@@ -15,9 +15,17 @@
 		padding:0px;
 		font-weight:bold;
 
+		@media screen and (max-width:$phone){
+			font-size:20px;
+		}
+
 		&.small-text{
 			font-size:18px;
 			color:$text-gray;
+
+			@media screen and (max-width:$phone){
+				font-size:16px;
+			}
 		}
 	}
 
@@ -40,6 +48,10 @@
 
 	@media screen and (max-width:$desktop){
 		padding-bottom:140px;
+	}
+
+	@media screen and (max-width:$phone){
+		padding-bottom:60px;
 	}
 
 }

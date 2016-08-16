@@ -5,6 +5,7 @@
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,greek' rel='stylesheet' type='text/css'>
 <link href="assets/styles/styles.css" rel="stylesheet" />
 <link href="assets/styles/libs/hamburgers.min.css" rel="stylesheet">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png" />
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="https://use.fontawesome.com/6c101a37f5.js"></script>
 </head>
@@ -22,7 +23,7 @@
 	</div>
 
 	<ul>
-		<li ng-repeat="n in nav"><a href="{{ n.link }}">{{ n.text }}</a></li>
+		<li ng-repeat="n in nav"><a href="{{ n.link }}" title="{{ n.text }}" target="{{ n.target }}">{{ n.text }}</a></li>
 		<li class="nav__social">
 			<a href="https://twitter.com/creedejo" target="_blank" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 			<a href="https://www.linkedin.com/in/johncreeden" target="_blank" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
@@ -113,6 +114,7 @@
 		</div>
 	</section>
 
+	<!-- EDUCATION -->
 	<section id="education" class="education">
 		<div class="overlay blue"></div>
 		<div class="content_container">
@@ -127,6 +129,7 @@
 		</div>
 	</section>
 
+	<!-- CONTACT -->
 	<section id="contact" class="contact">
 		<div class="content_container">
 			<h1><strong>Contact</strong> Me</h1>
@@ -135,10 +138,10 @@
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec libero sed massa tincidunt placerat quis et orci. Nunc et urna quis erat vehicula vehicula. Vestibulum eget mauris sed lacus scelerisque iaculis. 
 				</p>
-				<form id="form_contact" name="form_contact">
+				<form id="form_contact" name="form_contact" action="contact.php" method="POST">
 					<div class="row">
 						<label for="txt_name">Name:*</label>
-						<input id="txt_name" name="txt_name" type="text" />
+						<input id="txt_name" name="txt_name" type="text" required />
 					</div>
 					<div class="row">
 						<label for="txt_company">Company:</label>
@@ -147,7 +150,7 @@
 					<div class="row">
 						<div class="col-left">
 							<label for="txt_email">E-mail:*</label>
-							<input id="txt_email" name="txt_email" type="text" />
+							<input id="txt_email" name="txt_email" type="email" required />
 						</div>
 						<div class="col-right">
 							<label for="txt_phone">Phone:</label>
@@ -156,11 +159,12 @@
 					</div>
 					<div class="row">
 						<label for="txt_message">What would you like to talk about?:*</label>
-						<textarea id="txt_message" name="txt_message"></textarea>
+						<textarea id="txt_message" name="txt_message" required></textarea>
 					</div>
 					<div class="row">
 						<input type="submit" value="submit">
 					</div>
+					<p class="contact_confirm">Thanks! Your message has been sent.  I'll be in touch shortly.</p>
 				</form>
 			</div>
 		</div>

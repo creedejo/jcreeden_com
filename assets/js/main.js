@@ -9,6 +9,51 @@ $(document).ready(function(){
 	    toggleNav();
 	  });
 	 
+	 //detect iOS
+	 var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+	 if(iOS){
+	 	$("body").addClass("ios");
+	 }
+
+	 $form = $("#form_contact");
+	 
+	 $form.submit(function(e){
+	 	e.preventDefault();
+
+
+	 	var $responseContainer = $(".contact_confirm");
+		var $responseP = $responseContainer.find("p").eq(0);
+		$responseP.html("Sending...");
+		$responseContainer.fadeIn();
+
+	 	var postURL = $(this).attr("action");
+	 	var name="John", company = "My Company", email="johncreeden@hotmail.com", phone="2018033829", message="hello ball!";
+	 	//var data = {"name":name,"company":company,"email":email,"phone":phone,"message":message};
+	 	var data = $(this).serialize();
+	 	$.ajax({
+		    url : postURL,
+		    type: "POST",
+		    data : data,
+		    success: function(data, textStatus, jqXHR)
+		    {
+		        var $responseContainer = $(".contact_confirm");
+		        var $responseP = $responseContainer.find("p").eq(0);
+		        $responseP.html(data);
+		        //$responseContainer.fadeIn();
+		    },
+		    error: function (jqXHR, textStatus, errorThrown)
+		    {
+		 		var $responseContainer = $(".contact_confirm");
+		        var $responseP = $responseContainer.find("p").eq(0);
+		        $responseP.html("I'm sorry there was an error sending your message.  Please try again or send me an email at <a href='mailto:johncreeden@hotmail.com'>johncreeden@hotmail.com</a>.");
+		        console.log(jqXHR.status);
+		        console.log(errorThrown);
+		        //$responseContainer.fadeIn();
+		    }
+		});
+
+	 });
+
 });
 
 //app
