@@ -12,8 +12,11 @@ if(isset($_POST['txt_name'])){
 	$message = $_POST['txt_message'];
 
 	//connect to database
-	$dbserver = "aaa1c1k6w41dwz.cmmmzwqxiwl1.us-east-1.rds.amazonaws.com";
-	$username="jcreeden";$password="jcreedenroot";$database="jcreeden";
+	$config = require_once("app/config.php");
+	$dbserver=$config["DB_HOST"];
+	$username=$config["DB_NAME"];
+	$password=$config["DB_PASSWORD"];
+	$database=$config["DB_NAME"];
 	$conn = new mysqli($dbserver,$username,$password,$database);
 	$sql = "INSERT INTO contact (name,company,email,phone,message) VALUES ('" . $name . "','" . $company . "','" . $email . "','" . $phone . "','" . $message . "')";
 

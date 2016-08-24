@@ -43,6 +43,15 @@
 				    content: "";
 				    display: block;
 				}
+
+				&__alt{
+					position:absolute;
+					left:-500px;
+					top:-500px;
+					width:1px;
+					height:1px;
+					overflow:hidden;
+				}
 			}
 
 			label{

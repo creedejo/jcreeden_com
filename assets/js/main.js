@@ -28,33 +28,40 @@ $(document).ready(function(){
 
 		$("html,body").animate({scrollTop:$(document).height()},250);
 
-	 	var postURL = $(this).attr("action");
-	 	var name="John", company = "My Company", email="johncreeden@hotmail.com", phone="2018033829", message="hello ball!";
-	 	//var data = {"name":name,"company":company,"email":email,"phone":phone,"message":message};
-	 	var data = $(this).serialize();
-	 	$.ajax({
-		    url : postURL,
-		    type: "POST",
-		    data : data,
-		    success: function(data, textStatus, jqXHR)
-		    {
-		    	//console.log("RESPONSE: " + data);
-		        var $responseContainer = $(".contact_confirm");
-		        //var $responseP = $responseContainer.find("p").eq(0);
-		        $responseContainer.html(data);
-		        //$responseContainer.fadeIn();
-		    },
-		    error: function (jqXHR, textStatus, errorThrown)
-		    {
-		 		var $responseContainer = $(".contact_confirm");
-		        //var $responseP = $responseContainer.find("p").eq(0);
-		        $responseContainer.html("I'm sorry there was an error sending your message.<br>Please try again or send me an email at <a href='mailto:johncreeden@hotmail.com'>johncreeden@hotmail.com</a>.");
-		        console.log("Status: " + jqXHR.status);
-		        console.log("Error: " + errorThrown);
-		        //$responseContainer.fadeIn();
-		    }
-		});
+		//simple check for automated form input
+		if($("#firstname").val()){
+			$responseContainer.html("Your message was sent.  Thank you.");
+		}
+		else{
+			
 
+		 	var postURL = $(this).attr("action");
+		 	var name="John", company = "My Company", email="johncreeden@hotmail.com", phone="2018033829", message="hello ball!";
+		 	//var data = {"name":name,"company":company,"email":email,"phone":phone,"message":message};
+		 	var data = $(this).serialize();
+		 	$.ajax({
+			    url : postURL,
+			    type: "POST",
+			    data : data,
+			    success: function(data, textStatus, jqXHR)
+			    {
+			    	//console.log("RESPONSE: " + data);
+			        var $responseContainer = $(".contact_confirm");
+			        //var $responseP = $responseContainer.find("p").eq(0);
+			        $responseContainer.html(data);
+			        //$responseContainer.fadeIn();
+			    },
+			    error: function (jqXHR, textStatus, errorThrown)
+			    {
+			 		var $responseContainer = $(".contact_confirm");
+			        //var $responseP = $responseContainer.find("p").eq(0);
+			        $responseContainer.html("I'm sorry there was an error sending your message.<br>Please try again or send me an email at <a href='mailto:johncreeden@hotmail.com'>johncreeden@hotmail.com</a>.");
+			        console.log("Status: " + jqXHR.status);
+			        console.log("Error: " + errorThrown);
+			        //$responseContainer.fadeIn();
+			    }
+			});
+		}
 	 });
 
 });
