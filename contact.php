@@ -1,7 +1,7 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
 
 if(isset($_POST['txt_name'])){
 
@@ -73,7 +73,7 @@ if(isset($_POST['txt_name'])){
 
 	}
 else{
-	echo "Form submission was not valid."
+	echo "Form submission was not valid.";
 }
 
 ?>

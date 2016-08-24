@@ -22,8 +22,8 @@ $(document).ready(function(){
 
 
 	 	var $responseContainer = $(".contact_confirm");
-		var $responseP = $responseContainer.find("p").eq(0);
-		$responseP.html("Sending...");
+		//var $responseP = $responseContainer.find("p").eq(0);
+		$responseContainer.html("Sending...");
 		$responseContainer.fadeIn();
 
 		$("html,body").animate({scrollTop:$(document).height()},250);
@@ -38,18 +38,19 @@ $(document).ready(function(){
 		    data : data,
 		    success: function(data, textStatus, jqXHR)
 		    {
+		    	//console.log("RESPONSE: " + data);
 		        var $responseContainer = $(".contact_confirm");
-		        var $responseP = $responseContainer.find("p").eq(0);
-		        $responseP.html(data);
+		        //var $responseP = $responseContainer.find("p").eq(0);
+		        $responseContainer.html(data);
 		        //$responseContainer.fadeIn();
 		    },
 		    error: function (jqXHR, textStatus, errorThrown)
 		    {
 		 		var $responseContainer = $(".contact_confirm");
-		        var $responseP = $responseContainer.find("p").eq(0);
-		        $responseP.html("I'm sorry there was an error sending your message.<br>Please try again or send me an email at <a href='mailto:johncreeden@hotmail.com'>johncreeden@hotmail.com</a>.");
-		        console.log(jqXHR.status);
-		        console.log(errorThrown);
+		        //var $responseP = $responseContainer.find("p").eq(0);
+		        $responseContainer.html("I'm sorry there was an error sending your message.<br>Please try again or send me an email at <a href='mailto:johncreeden@hotmail.com'>johncreeden@hotmail.com</a>.");
+		        console.log("Status: " + jqXHR.status);
+		        console.log("Error: " + errorThrown);
 		        //$responseContainer.fadeIn();
 		    }
 		});

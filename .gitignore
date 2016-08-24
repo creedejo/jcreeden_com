@@ -3,3 +3,7 @@ node_modules/
 # Sublime Project Files
 jcreeden_com.sublime-project
 jcreeden_com.sublime-workspace
+
+
+# Zip files for AWS packages
+*.zip
