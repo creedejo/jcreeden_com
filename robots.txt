@@ -1,0 +1,8 @@
+# robots.txt for jcreeden.com
+
+User-agent: *
+Disallow: 
+Disallow: /data/
+Disallow: /assets/js/
+Disallow: /assets/styles/
+Disallow: /contact.php
