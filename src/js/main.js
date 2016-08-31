@@ -15,54 +15,7 @@ $(document).ready(function(){
 	 	$("body").addClass("ios");
 	 }
 
-	 $form = $("#form_contact");
-	 
-	 $form.submit(function(e){
-	 	e.preventDefault();
 
-
-	 	var $responseContainer = $(".contact_confirm");
-		//var $responseP = $responseContainer.find("p").eq(0);
-		$responseContainer.html("Sending...");
-		$responseContainer.fadeIn();
-
-		$("html,body").animate({scrollTop:$(document).height()},250);
-
-		//simple check for automated form input
-		if($("#firstname").val()){
-			$responseContainer.html("Your message was sent.  Thank you.");
-		}
-		else{
-			
-
-		 	var postURL = $(this).attr("action");
-		 	var name="John", company = "My Company", email="johncreeden@hotmail.com", phone="2018033829", message="hello ball!";
-		 	//var data = {"name":name,"company":company,"email":email,"phone":phone,"message":message};
-		 	var data = $(this).serialize();
-		 	$.ajax({
-			    url : postURL,
-			    type: "POST",
-			    data : data,
-			    success: function(data, textStatus, jqXHR)
-			    {
-			    	//console.log("RESPONSE: " + data);
-			        var $responseContainer = $(".contact_confirm");
-			        //var $responseP = $responseContainer.find("p").eq(0);
-			        $responseContainer.html(data);
-			        //$responseContainer.fadeIn();
-			    },
-			    error: function (jqXHR, textStatus, errorThrown)
-			    {
-			 		var $responseContainer = $(".contact_confirm");
-			        //var $responseP = $responseContainer.find("p").eq(0);
-			        $responseContainer.html("I'm sorry there was an error sending your message.<br>Please try again or send me an email at <a href='mailto:johncreeden@hotmail.com'>johncreeden@hotmail.com</a>.");
-			        console.log("Status: " + jqXHR.status);
-			        console.log("Error: " + errorThrown);
-			        //$responseContainer.fadeIn();
-			    }
-			});
-		}
-	 });
 
 });
 
@@ -139,8 +92,42 @@ app.controller('jcCtrl',['$scope','$http', '$sce', function($scope,$http,$sce) {
 		}
     }
 
-}]);
+    $scope.formData = {};
 
+    $scope.submitForm = function(){
+    	var url = "/contact.php";
+
+
+    	var $responseContainer = $(".contact_confirm");
+		$responseContainer.html("Sending...");
+		$responseContainer.fadeIn();
+		$("html,body").animate({scrollTop:$(document).height()},250);
+
+		if($scope.formData.fn){
+			$responseContainer.html("Your message was sent.  Thank you.");
+		}
+		else{
+			$http({
+	    		method	: "POST",
+	    		url     : url,
+	    		data    : $.param($scope.formData),
+	    		headers : {'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8'}
+	    	}).success(function(data){
+	    		var $responseContainer = $(".contact_confirm");
+			        $responseContainer.html(data);
+	    	})
+	    	.error(function(status){
+	    		var $responseContainer = $(".contact_confirm");
+		        $responseContainer.html("I'm sorry there was an error sending your message.<br>Please try again or send me an email at <a href='mailto:johncreeden@hotmail.com'>johncreeden@hotmail.com</a>.");
+		        console.log("Status: " + status);
+	    	});
+	
+		}
+
+    }
+
+
+}]);
 
 
 

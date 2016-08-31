@@ -1,15 +1,17 @@
 <?php
-//ini_set('display_errors', 1);
-//ini_set('display_startup_errors', 1);
-//error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+//echo 'POST: ' . $_POST
 
-if(isset($_POST['txt_name'])){
 
-	$name = $_POST['txt_name'];
-	$company = $_POST['txt_company'];
-	$email = $_POST['txt_email'];
-	$phone = $_POST['txt_phone'];
-	$message = $_POST['txt_message'];
+if(isset($_POST['name'])){
+
+	$name = $_POST['name'];
+	$company = $_POST['company'];
+	$email = $_POST['email'];
+	$phone = $_POST['phone'];
+	$message = $_POST['message'];
 
 	//connect to database
 	$config = require_once("app/config.php");
@@ -22,18 +24,7 @@ if(isset($_POST['txt_name'])){
 
 
 	$conn->query($sql);
-	/*
-	if ($conn->connect_error) {
-		echo "Connection error: " . $conn->connect_error;
-	}
-	else{
-		if ($conn->query($sql) === TRUE) {
-		    echo "New record created successfully";
-		} else {
-		    echo "Error: " . $sql . "<br>" . $conn->error;
-		}
-	}
-	*/
+
 
 	$conn->close();
 

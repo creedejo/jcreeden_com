@@ -141,31 +141,31 @@
 				<p>
 					Interested in working together, or have a question?  Fill out the form below and I'll get back to you as soon as possible.
 				</p>
-				<form id="form_contact" name="form_contact" action="contact.php" method="POST">
+				<form id="form_contact" name="form_contact" ng-submit="submitForm()">
 					<div class="row">
 						<label for="txt_name">Name:*</label>
-						<input id="txt_name" name="txt_name" type="text" required />
+						<input id="txt_name" name="txt_name" type="text" required ng-model="formData.name" />
 					</div>
 					<div class="row">
 						<label for="txt_company">Company:</label>
-						<input id="txt_company" name="txt_company" type="text" />
+						<input id="txt_company" name="txt_company" type="text" ng-model="formData.company" />
 					</div>
 					<div class="row">
 						<div class="col-left">
 							<label for="txt_email">E-mail:*</label>
-							<input id="txt_email" name="txt_email" type="email" required />
+							<input id="txt_email" name="txt_email" type="email" required ng-model="formData.email" />
 						</div>
 						<div class="col-right">
 							<label for="txt_phone">Phone:</label>
-							<input id="txt_phone" name="txt_phone" type="text" />
+							<input id="txt_phone" name="txt_phone" type="text" ng-model="formData.phone" />
 						</div>
 					</div>
 					<div class="row">
 						<label for="txt_message">What would you like to talk about?:*</label>
-						<textarea id="txt_message" name="txt_message" required></textarea>
+						<textarea id="txt_message" name="txt_message" required ng-model="formData.message"></textarea>
 					</div>
 					<div class="row__alt">
-						<input type="text" id="firstname" name="firstname" tabindex="-1" />
+						<input type="text" id="firstname" name="firstname" tabindex="-1" ng-model="formData.fn" />
 					</div>
 					<div class="row">
 						<input type="submit" value="submit">
