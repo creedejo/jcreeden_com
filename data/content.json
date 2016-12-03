@@ -2,7 +2,7 @@
 	"info":{
 		"lastname":"Creeden",
 		"firstname":"John",
-		"about":"<p>I am a web developer based out of central New Jersey.  Over the years, I've done a lot of developing, both back end and front end.  I have a great appreciation for the balance between creative and development and I strive to constantly learn and improve my awareness of new technologies.</p><p>When I am not hard at work coding, I am usually spending time with my wife Sharon and son Jack(soon to be a big brother).</p><p>If you would like to know more, feel free to <a href='#contact' title='contact me'>contact me</a> or view <a href='/assets/pdf/JohnCreeden_resume.pdf' title ='John creeden resume' target='_blank'>my resume</a>.</p>",
+		"about":"<p>I am a web developer based out of central New Jersey.  Over the years, I've done a lot of developing, both back end and front end.  I have a great appreciation for the balance between creative and development and I strive to constantly learn and improve my awareness of new technologies.</p><p>When I am not hard at work coding, I am usually spending time with my wife Sharon and sons Jack and Joseph.</p><p>If you would like to know more, feel free to <a href='#contact' title='contact me'>contact me</a> or view <a href='/assets/pdf/JohnCreeden_resume.pdf' title ='John creeden resume' target='_blank'>my resume</a>.</p>",
 		"skills":[
 			{"tech":"PHP","years":3},
 			{"tech":"C#","years":10},
