@@ -2,6 +2,7 @@
 
 User-agent: *
 Disallow: 
+Disallow: /app/
 Disallow: /data/
 Disallow: /assets/js/
 Disallow: /assets/styles/
